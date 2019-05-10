@@ -22,7 +22,7 @@
   <parent>
     <groupId>io.fabric8</groupId>
     <artifactId>kubernetes-model-generator</artifactId>
-    <version>2.0.10</version>
+    <version>2.0.10.fuse-preprod-740001-redhat-00001</version>
   </parent>
 
   <artifactId>kubernetes-model</artifactId>
@@ -57,13 +57,13 @@
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-validator</artifactId>
-      <version>5.2.4.Final</version>
+      <version>5.2.4.Final-redhat-1</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>javax.el</groupId>
       <artifactId>javax.el-api</artifactId>
-      <version>2.2.4</version>
+      <version>2.2.4.redhat-1</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -131,14 +131,14 @@
             <configuration>
               <target>
                 <echo>removing the duplicate generated calss</echo>
-                <delete file="${basedir}/target/generated-sources/io/fabric8/kubernetes/api/model/IntOrString.java" verbose="true" />
-                <delete file="${basedir}/target/generated-sources/io/fabric8/kubernetes/api/model/Quantity.java" verbose="true" />
-                <delete file="${basedir}/target/generated-sources/io/fabric8/openshift/api/model/Template.java" verbose="true" />
-                <delete file="${basedir}/target/generated-sources/io/fabric8/kubernetes/api/model/HasMetadata.java" verbose="true" />
-                <delete file="${basedir}/target/generated-sources/io/fabric8/kubernetes/api/model/WatchEvent.java" verbose="true" />
+                <delete file="${basedir}/target/generated-sources/io/fabric8/kubernetes/api/model/IntOrString.java" verbose="true"></delete>
+                <delete file="${basedir}/target/generated-sources/io/fabric8/kubernetes/api/model/Quantity.java" verbose="true"></delete>
+                <delete file="${basedir}/target/generated-sources/io/fabric8/openshift/api/model/Template.java" verbose="true"></delete>
+                <delete file="${basedir}/target/generated-sources/io/fabric8/kubernetes/api/model/HasMetadata.java" verbose="true"></delete>
+                <delete file="${basedir}/target/generated-sources/io/fabric8/kubernetes/api/model/WatchEvent.java" verbose="true"></delete>
                 <delete verbose="true">
                   <fileset dir="${basedir}/target/generated-sources">
-                    <include name="*.java"/>
+                    <include name="*.java"></include>
                   </fileset>
                 </delete>
               </target>
@@ -157,14 +157,12 @@
         <configuration>
           <instructions>
             <Bundle-SymbolicName>${project.groupId}.${project.artifactId}</Bundle-SymbolicName>
-            <Export-Package>
-              io.fabric8.kubernetes.api.builder,
+            <Export-Package>io.fabric8.kubernetes.api.builder,
               io.fabric8.kubernetes.api.model,
               io.fabric8.kubernetes.api.model.apiextensions,
               io.fabric8.kubernetes.api.model.extensions,
               io.fabric8.openshift.api.model,
-              io.fabric8.kubernetes.api.model.validators
-            </Export-Package>
+              io.fabric8.kubernetes.api.model.validators</Export-Package>
           </instructions>
         </configuration>
       </plugin>
