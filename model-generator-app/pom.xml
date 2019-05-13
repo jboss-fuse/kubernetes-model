@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
 
     Copyright (C) 2011 Red Hat, Inc.
@@ -22,18 +23,16 @@
   <parent>
     <groupId>io.fabric8</groupId>
     <artifactId>kubernetes-model-generator</artifactId>
-    <version>2.0.10</version>
+    <version>2.0.10.fuse-preprod-740004-redhat-00001</version>
   </parent>
 
   <artifactId>model-generator-app</artifactId>
 
   <name>Fabric8 :: Origin and Kubernetes Model Generator</name>
-  <description>
-        This app generates a JSON Schema based on updated go package dependencies from [Origin](https://github.com/openshift/origin) and [Kubernetes](https://github.com/GoogleCloudPlatform/kubernetes), which in turn is used to generate model Java types which on successful testing the binary is released to maven central.
-    </description>
+  <description>This app generates a JSON Schema based on updated go package dependencies from [Origin](https://github.com/openshift/origin) and [Kubernetes](https://github.com/GoogleCloudPlatform/kubernetes), which in turn is used to generate model Java types which on successful testing the binary is released to maven central.</description>
 
   <properties>
-    <arquillian.version> 1.1.5.Final</arquillian.version>
+    <arquillian.version>1.1.5.Final</arquillian.version>
     <fabric8.version>2.0.19</fabric8.version>
 
     <fabric8.generateJson>false</fabric8.generateJson>
